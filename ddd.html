@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delicious Bites - Recipe Book</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fef9f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff8c42;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delicious Bites - Recipe Book</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fef9f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff8c42;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      background: #fff3e0;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+
+    .menu button {
+      background-color: #ff8c42;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .menu button:hover {
+      background-color: #e6762e;
+    }
+
+   .recipe-content {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  ul {
+      padding-left: 20px;
+    }
+
+    h2 {
+      color: #ff8c42;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Delicious Bites</h1>
+    <p>Your go-to recipe book for tasty dishes!</p>
+  </header>
+ <nav class="menu">
+    <button onclick="showCategory('appetizers')">Appetizers</button>
+    <button onclick="showCategory('main')">Main Courses</button>
+    <button onclick="showCategory('desserts')">Desserts</button>
+    <button onclick="showCategory('beverages')">Beverages</button>
+  </nav>
+
+  <section id="content" class="recipe-content">
+    <p>Select a category to view recipes.</p>
+</section>
+
+  <script>
+    const recipes = {
+      appetizers: `
+        <h2>Appetizers</h2>
+        <img src="Bruscheta.jpg" alt="Appetizers">
+        <img src="spring rolls.jpg" alt="Appetizers">
+        
+        <ul>
+          <li><strong>Bruschetta:</strong> Toasted bread topped with tomatoes, basil, and olive oil.</li>
+          <li><strong>Spring rolls:</strong> Well spiced spring roll.</li>
+        </ul>
+      `,
+      main: `
+        <h2>Main Courses</h2>
+        <img src="Grilled chicken.jpg" alt="main course">
+        <img src="creamy pasta and chicken.jpg" alt="main course">
+
+        
+        <ul>
+          <li><strong>Grilled Chicken:</strong> Juicy grilled chicken with herbs and spices.</li>
+          <li><strong>creamy pasta and chicken:</strong> Well seasoned pasta with chicken.</li>
+        </ul>
+      `,
+desserts: `
+        <h2>Desserts</h2>
+        <img src="Chocolate cake.jpg" alt="Desserts">
+        <img src="Fruits salad.jpg" alt="Desserts">
+        <ul>
+          <li><strong>Chocolate Cake:</strong> Rich chocolate cake with creamy frosting.</li>
+          <li><strong>Fruit Salad:</strong> Fresh mixed fruits with honey and lime.</li>
+        </ul>
+      `,
+      beverages: `
+        <h2>Beverages</h2>
+        <img src="Mojito.jpg" alt="Beverages">
+        <img src="Wine.jpg" alt="Beverages">
+        <ul>
+          <li><strong>Mojito:</strong> Refreshing Mjito.</li>
+          <li><strong>Wine:</strong> Refreshing red and white wine.</li>
+        </ul>
+      `
+    };
+   function showCategory(category) {
+      const content = document.getElementById('content');
+      content.innerHTML = recipes[category];
+    }
+  </script>
+
+</body>
+</html>
